@@ -7,7 +7,7 @@ const createTab = (tabName) => {
     const funFunction = () => {
         console.log("it worked for "  +tabName);
     }
-    button.classList.add("tablinks");
+    button.classList.add("tabLinks");
     button.onclick = funFunction;
     button.value = tabName;
     button.textContent = tabName
@@ -18,7 +18,7 @@ const createTab = (tabName) => {
 // adding tabs to a nav
 const addTabs = () => {
     const tabNav = document.createElement("nav");
-    tabNav.id = "navTabs"
+    tabNav.classList.add("navTabs");
     const pageNames = ["Home", "Menu", "Contact"]
     pageNames.forEach(n => {
         const tab = createTab(n)
