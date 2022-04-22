@@ -24,16 +24,18 @@ const createTab = (tabName) => {
       // Show the current tab, and add an "active" class to the button that opened the tab
       document.getElementById(page).style.display = "block";
       event.currentTarget.className += " active";
-    }
+      
 
+    }
     button.classList.add("tabLinks");
-    button.onclick = function(){activateTab(event, tabName + "Page")};
-    // button.onclick = funFunction(event, tabName + "Page");
     button.value = tabName;
     button.textContent = tabName
+    button.onclick = function(){activateTab(event, tabName + "Page")};
+    button.id = tabName + "Button";
     div.appendChild(button);
     return div
 }
+
 
 // adding tabs to a nav
 const addTabs = () => {

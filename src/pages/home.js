@@ -12,7 +12,7 @@ const pageContent = () => {
     const divPage = document.createElement("div");
     divPage.id = "homePage";
     divPage.classList.add("tabContent");
-    
+
     divContent.appendChild(divPage);
     divPage.appendChild(sectionContent.addPageTitle());
     divPage.appendChild(sectionContent.addSubText());
