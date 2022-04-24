@@ -1,4 +1,4 @@
-import "../styles/tabstyles.css"
+import "../assets/css/tabstyles.css"
 import {loadHeader, loadDefaultTab} from "./headertabs";
 import homePage from "./pages/home";
 import contactPage from "./pages/contact";

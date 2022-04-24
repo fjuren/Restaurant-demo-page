@@ -10,7 +10,7 @@ const pageContent = () => {
     // // add home page content
     const title = "Contact Us"
     const subText =""   
-    const image = "../assets/pizza-table.png"
+    const image = "../assets/images/pizza-table.png"
     const contentHours = "HOURS woooo"
     const sectionContent = new pageSection(title,subText, image, contentHours);
 

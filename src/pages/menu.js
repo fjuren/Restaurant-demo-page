@@ -4,7 +4,7 @@ const pageContent = () => {
     // // add home page content
     const title = "Menu"
     const subText ="Menu subtext"   
-    const image = "../assets/pizza-dining-room.jfif"
+    const image = "../assets/images/pizza-dining-room.jfif"
     const content = "Menu content goes here."
     const sectionContent = new pageSection(title,subText, image, content);
 
