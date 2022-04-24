@@ -5,7 +5,7 @@ import homePage from "./pages/home";
 import contactPage from "./pages/contact";
 import menuPage from "./pages/menu";
 
-img.src = pizzaDining
+console.log(pizzaDining)
 loadHeader();
 homePage.loadPage();
 menuPage.loadPage();
