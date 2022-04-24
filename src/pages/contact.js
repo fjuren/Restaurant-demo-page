@@ -1,5 +1,5 @@
 import { pageSection } from "../page components/components";
-
+import pizzaDining from '/assets/images/pizza-table.png'
 
 // Contact Us
 // Contact
@@ -10,7 +10,7 @@ const pageContent = () => {
     // // add home page content
     const title = "Contact Us"
     const subText =""   
-    const image = "../assets/images/pizza-table.png"
+    const image = pizzaDining;
     const contentHours = "HOURS woooo"
     const sectionContent = new pageSection(title,subText, image, contentHours);
 
