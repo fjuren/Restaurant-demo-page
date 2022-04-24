@@ -1,5 +1,5 @@
 import { pageSection } from "../page components/components";
-import pizzaDining from '/assets/images/pizza-table.png'
+import pizzaDining from '/assets/images/pizza-dining.jpg'
 
 // Contact Us
 // Contact

@@ -1,11 +1,11 @@
 import { pageSection } from "../page components/components";
-import pizzaDining from '/assets/images/pizza-table.png'
+import pizzaTable from '/assets/images/pizza-table.png'
 
 const pageContent = () => {
     // // add home page content
     const title = "Menu"
     const subText ="Menu subtext"   
-    const image = pizzaDining;
+    const image = pizzaTable;
     const content = "Menu content goes here."
     const sectionContent = new pageSection(title,subText, image, content);
 
