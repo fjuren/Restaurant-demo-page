@@ -19,7 +19,11 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif|svg|eot|ttf|woff)$/, // added for images
                 type: 'asset/resource' 
-            }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+              },
         ],
     },
 };
