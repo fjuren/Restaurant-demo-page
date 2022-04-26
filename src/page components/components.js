@@ -16,7 +16,7 @@ export class pageSection {
 
     addSubText() {
         const h3 = document.createElement("h3");
-        h3.textContent = this.subText;
+        h3.textContent = this.subtext;
         return this.section.appendChild(h3);
     }
 
