@@ -20,23 +20,25 @@ const pageContent = () => {
     divPage.appendChild(sectionContent.addPageTitle());
     divPage.appendChild(sectionContent.addSubText());
     divPage.appendChild(sectionContent.addImage());
-    
-    // create order now subsection
-    divPage.appendChild(sectionContent.addContent()); // append content under parent div
-    // divPage.insertAdjacentElement("afterend", sectionContent.addContent());
+    divPage.appendChild(sectionContent.addContent()); 
+
+    // icon section
+    const flexDiv = document.createElement("div");
+    flexDiv.classList.add("flex-container");
     const divIcon1 = document.createElement("div");
     const divIcon2 = document.createElement("div");
-    // add icon images as nodes
+    // add icon images as nodes with id
     const icons = (x, id) => {
         const icon1 = document.createElement("img");
-        icon1.setAttribute("src", x);
         icon1.id = id;
+        icon1.setAttribute("src", x);
         return icon1
     }
-    // add icons to html
-    document.getElementById("orderNow").insertAdjacentElement("afterend", divIcon1);
+    // add icons to page with flexbox
+    document.getElementById("contentID").insertAdjacentElement("afterend", flexDiv);
+    flexDiv.appendChild(divIcon1);
     divIcon1.appendChild(icons(uberEats, "uberEats"));
-    document.getElementById("orderNow").insertAdjacentElement("afterend", divIcon2);
+    flexDiv.appendChild(divIcon2);
     divIcon2.appendChild(icons(doorDash, "doorDash"));
 
     return divContent;
@@ -44,12 +46,9 @@ const pageContent = () => {
 
 // add styling unique to homepage
 const addStyling = () => {
-
     const body = document.getElementById("homePage");
-
     body.classList.add("insertClass")
     // console.log(body);
-
     return body
 }
 

@@ -12,6 +12,8 @@
          url('/assets/fonts/open-sans-v28-latin-italic.svg#OpenSans') format('svg'); /*Legacy iOS*/
   }
 
+
+
 /* page titles */
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -19,6 +21,10 @@ h1 {
 
 h3 {
     font-family: 'Open Sans'
+}
+
+img {
+    height: 20rem;
 }
 
 .tabContent {
@@ -35,8 +41,21 @@ h3 {
     text-align: center;
     padding: 1px 1px;
     font-size: 12px;
- } 
+} 
 
- img {
-     height: 20rem;
- }
+/* .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container > div > img {
+    height: 70px;
+} */
+
+/* #uberEats {
+    height: 70px;
+};
+
+#doorDash {
+    height: 70px;
+}; */

@@ -1,28 +1,22 @@
-@font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: 400;
-    src: url('/assets/fonts/open-sans-v28-latin-italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('/assets/fonts/open-sans-v28-latin-italic.eot?#iefix') format('embedded-opentype'), /*IE6-IE8*/
-         url('/assets/fonts/open-sans-v28-latin-italic.woff2') format('woff2'), /*Super Modern Browsers*/
-         url('/assets/fonts/open-sans-v28-latin-italic.woff') format('woff'), /* Modern Browsers */
-         url('/assets/fonts/open-sans-v28-latin-italic.ttf') format('truetype'), /*Safari, Android, iOS*/
-         url('/assets/fonts/open-sans-v28-latin-italic.svg#OpenSans') format('svg'); /*Legacy iOS*/
-  }
 
-#orderNow {
-    font-family: 'Open Sans';
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#doorDash {
-    height: 50px;
-}
-
-#uberEats {
+.flex-container > div > img {
     height: 70px;
 }
 
-#homePage > h1 + h3 + img {
-    /* background-image: url(""); */
+
+/* 
+ #homePage > h1 + h3 + img {
+    background-image: url("");
 }
+ */
+
+/* contentID styling added at bottom. Adding above flex css interupts the code */
+#contentID {
+    font-family: 'Open Sans';
+};

@@ -28,21 +28,8 @@ export class pageSection {
 
     addContent() {
         const p = document.createElement("p");
-        p.id = "orderNow"
+        p.id = "contentID"
         p.textContent = this.content
         return this.section.appendChild(p);
     }
 }
-
-// export class icons {
-//     constructor(icon1, icon2) {
-//         this.icon1 = icon1;
-//         this.icon2 = icon2;
-//     }
-
-//     addIcon1() {
-//         const divIcon1 = document.createElement("div");
-        
-//         return divIcon1.appendChild(this.icon1);
-//     }
-// }
