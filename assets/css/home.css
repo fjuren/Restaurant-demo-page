@@ -1,8 +1,9 @@
-
-
 .flex-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 1rem;
 }
 
 .flex-container > div > img {
@@ -19,4 +20,5 @@
 /* contentID styling added at bottom. Adding above flex css interupts the code */
 #contentID {
     font-family: 'Open Sans';
+    font-size: 1.2rem;
 };
