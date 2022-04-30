@@ -22,7 +22,8 @@ const pageContent = () => {
     divPage.appendChild(sectionContent.addImage());
     
     // create order now subsection
-    divPage.insertAdjacentElement("afterend", sectionContent.addContent());
+    divPage.appendChild(sectionContent.addContent()); // append content under parent div
+    // divPage.insertAdjacentElement("afterend", sectionContent.addContent());
     const divIcon1 = document.createElement("div");
     const divIcon2 = document.createElement("div");
     // add icon images as nodes
