@@ -4,7 +4,7 @@ const addFooter = () => {
     divOuter.classList.add("footer", "fixed-bottom");
     const p = document.createElement("p");
     divOuter.appendChild(p);
-    p.textContent = "Copyright 2022"
+    p.textContent = "© Copyright 2022 - Created by Fabian Juren"
     
     // place footer after contentPages div 
     document.getElementById("contentPages").insertAdjacentElement("afterend",divOuter);

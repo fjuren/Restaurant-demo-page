@@ -1,13 +1,15 @@
 import { pageSection } from "../page components/components";
-import pizzaDining from '/assets/images/pizza-table.png'
+import pizzaDining from '/assets/images/pizza-dining-homepage.png'
+import doorDash from '/assets/images/doorDash.png'
+import uberEats from '/assets/images/uberEats.png'
 
 const pageContent = () => {
     // // add home page content
     const title = "CICI Pizzeria"
     const subText = "Local, fresh, and high quality ingredients on every pizza"   
     const image = pizzaDining;
-    const content = ""
-    const sectionContent = new pageSection(title,subText, image, content);
+    const content = "Order now"
+    const sectionContent = new pageSection(title, subText, image, content);
 
     const divContent = document.getElementById("contentPages");
     const divPage = document.createElement("div");
@@ -18,7 +20,24 @@ const pageContent = () => {
     divPage.appendChild(sectionContent.addPageTitle());
     divPage.appendChild(sectionContent.addSubText());
     divPage.appendChild(sectionContent.addImage());
-    divPage.appendChild(sectionContent.addContent());
+    
+    // create order now subsection
+    divPage.insertAdjacentElement("afterend", sectionContent.addContent());
+    const divIcon1 = document.createElement("div");
+    const divIcon2 = document.createElement("div");
+    // add icon images as nodes
+    const icons = (x, id) => {
+        const icon1 = document.createElement("img");
+        icon1.setAttribute("src", x);
+        icon1.id = id;
+        return icon1
+    }
+    // add icons to html
+    document.getElementById("orderNow").insertAdjacentElement("afterend", divIcon1);
+    divIcon1.appendChild(icons(uberEats, "uberEats"));
+    document.getElementById("orderNow").insertAdjacentElement("afterend", divIcon2);
+    divIcon2.appendChild(icons(doorDash, "doorDash"));
+
     return divContent;
 }
 
