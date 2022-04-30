@@ -15,11 +15,14 @@ const pageContent = () => {
     const divPage = document.createElement("div");
     divPage.id = "homePage";
     divPage.classList.add("tabContent");
+    const divCover = document.createElement("div");
+    divCover.id = "divCover"
 
     divContent.appendChild(divPage);
-    divPage.appendChild(sectionContent.addPageTitle());
+    divPage.appendChild(divCover);
+    divCover.appendChild(sectionContent.addPageTitle());
     divPage.appendChild(sectionContent.addSubText());
-    divPage.appendChild(sectionContent.addImage());
+    // divCover.appendChild(sectionContent.addImage());
     divPage.appendChild(sectionContent.addContent()); 
 
     // icon section
