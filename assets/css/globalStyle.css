@@ -13,7 +13,10 @@
   }
 
 
-
+body {
+    position: relative;
+    margin: 0;
+}
 /* page titles */
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -41,13 +44,12 @@ img {
         background-attachment: scroll;
         background-position: 0% 0%;
         position: fixed;
-        bottom: 0pt;
+        bottom: 0;
         left: 0pt;
     }   
     
     .footer > p {
         height:24px;
-        /* width: 1000px; */
         margin:auto;
         font-size: 12px;
         padding: 15px 1px 0px;
@@ -60,9 +62,8 @@ img {
         background-color: #f1f1f1;
         height:43px; 
         width: 105%; 
-        position: relative;
-        bottom: -6pt;
-        left: -6pt;
+        position: absolute;
+        bottom: 0;
     }   
     
     .footer > p {
