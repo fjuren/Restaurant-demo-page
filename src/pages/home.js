@@ -15,14 +15,15 @@ const pageContent = () => {
     const divPage = document.createElement("div");
     divPage.id = "homePage";
     divPage.classList.add("tabContent");
-    const divCover = document.createElement("div");
-    divCover.id = "divCover"
+    const divCoverHome = document.createElement("div");
+    divCoverHome.id = "divCoverHome"
 
     divContent.appendChild(divPage);
-    divPage.appendChild(divCover);
-    divCover.appendChild(sectionContent.addPageTitle());
+    divPage.appendChild(divCoverHome);
+    divCoverHome.appendChild(sectionContent.addPageTitle());
     divPage.appendChild(sectionContent.addSubText());
-    // divCover.appendChild(sectionContent.addImage());
+    // image comes from CSS instead
+    // divCoverHome.appendChild(sectionContent.addImage()); 
     divPage.appendChild(sectionContent.addContent()); 
 
     // icon section
@@ -48,17 +49,17 @@ const pageContent = () => {
 }
 
 // add styling unique to homepage
-const addStyling = () => {
-    const body = document.getElementById("homePage");
-    body.classList.add("insertClass")
-    // console.log(body);
-    return body
-}
+// const addStyling = () => {
+//     const body = document.getElementById("homePage");
+//     body.classList.add("insertClass")
+//     // console.log(body);
+//     return body
+// }
 
 const loadPage = () => {
     const home = pageContent();
-    const styles = addStyling();
-    return home, styles;
+    // const styles = addStyling();
+    return home;
     }
 
 

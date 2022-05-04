@@ -4,7 +4,10 @@ import pizzaDining from '../assets/images/pizza-table.png'  // added for images
 import "../assets/css/globalStyle.css";
 // page specific css importedafter global
 import "../assets/css/home.css";
+import "../assets/css/menu.css";
+import "../assets/css/contact.css";
 import "../assets/css/tabstyles.css";
+
 
 // page js imported
 import {loadHeader, loadDefaultTab} from "./headertabs";

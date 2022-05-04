@@ -24,34 +24,21 @@
     }
 }
 
-
-
-/* h3 {
-    padding-top: 1rem;
-} */
-
 .flex-container > div > img {
     height: 70px;
 }
 
-#divCover {
+#divCoverHome {
     background-image: url('/assets/images/pizza-dining-homepage.png');
-    height: 400px;
+    height: 25rem;
     background-size: cover;
     background-position: center;;
 }
 
-#divCover > h1 {
+#divCoverHome > h1 {
     padding-top: 14px;
     padding-left: 15px;
     font-size: 2.4rem;
     text-align: left;
 }
 
-/* contentID styling added at bottom. Adding above flex css interupts the code */
-#contentID {
-    font-family: 'Open Sans';
-    font-size: 1.2rem;
-    padding-top: 15px;
-    /* padding-bottom: 15px; */
-};

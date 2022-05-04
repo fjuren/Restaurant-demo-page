@@ -1,6 +1,7 @@
 export class pageSection {
     constructor(title,subText, image, content){
         this.section = document.createElement('section');
+        // this.page = page;
         this.title = title;
         this.subtext = subText;
         this.image = image;
@@ -28,7 +29,7 @@ export class pageSection {
 
     addContent() {
         const p = document.createElement("p");
-        p.id = "contentID"
+        p.id = "contentID";
         p.textContent = this.content
         return this.section.appendChild(p);
     }

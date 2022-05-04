@@ -61,7 +61,7 @@ img {
     .footer {
         background-color: #f1f1f1;
         height:43px; 
-        width: 105%; 
+        width: 100%; 
         position: absolute;
         bottom: 0;
     }   
@@ -74,3 +74,11 @@ img {
         text-align: center;
     }
 }
+
+/* contentID styling added at bottom. Adding above flex css interupts the code */
+#contentID {
+    font-family: 'Open Sans';
+    font-size: 1.2rem;
+    padding-top: 15px;
+    /* padding-bottom: 15px; */
+};
