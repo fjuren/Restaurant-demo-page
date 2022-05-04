@@ -14,7 +14,7 @@
 
 
 body {
-    position: relative;
+    /* position: relative; */
     margin: 0;
 }
 /* page titles */
@@ -43,7 +43,8 @@ img {
         background-repeat: repeat;
         background-attachment: scroll;
         background-position: 0% 0%;
-        position: fixed;
+        /* position: fixed; */
+        position: relative;
         bottom: 0;
         left: 0pt;
     }   
@@ -62,7 +63,8 @@ img {
         background-color: #f1f1f1;
         height:43px; 
         width: 100%; 
-        position: absolute;
+        /* position: absolute; */
+        position: relative;
         bottom: 0;
     }   
     
