@@ -13,43 +13,81 @@ const pageContent = () => {
     const divPage = document.createElement("div");
     divPage.id = "menuPage";
     divPage.classList.add("tabContent");
+
+    // build menu where each section has an image (divCoverMenu), image title, and menu 
+    // items below. Parent div for all menu items
     const divCoverMenu1 = document.createElement("div");
     divCoverMenu1.id = "divCoverMenu1"
+    divCoverMenu1.classList.add("grid-container-menu");
+    const divCoverMenu2 = document.createElement("div");
+    divCoverMenu2.id = "divCoverMenu2"
+    divCoverMenu2.classList.add("grid-container-menu");
 
+    // middle div for all menu items for positioning
+    // const divMenu1Items = document.createElement("div");
+    // divMenu1Items.classList.add("menu1Items");
+    // divCoverMenu1.appendChild(divMenu1Items);
+    // // const divMenu2Items = document.createElement("div");
+    // // divMenu2Items.classList.add("menu2Items");
+    // divCoverMenu2.appendChild(divMenu2Items)
+
+    //  first menu section
     divContent.appendChild(divPage);
     divPage.appendChild(divCoverMenu1);
-    divCoverMenu1.appendChild(sectionContent.addPageTitle());
-    // divPage.appendChild(sectionContent.addSubText());
-    // image comes from CSS instead
-    // divCoverMenu1Menu.appendChild(sectionContent.addImage()); 
+    divPage.appendChild(divCoverMenu2);
     divPage.appendChild(sectionContent.addContent()); 
 
-    // divContent.appendChild(divPage);
-    // // divPage.appendChild(sectionContent.addPageTitle());
-    // // divPage.appendChild(sectionContent.addSubText());
-    // divPage.appendChild(sectionContent.addImage());
-    // divPage.appendChild(sectionContent.addContent());
-
-    // // icon section
-    // const flexDiv = document.createElement("div");
-    // flexDiv.classList.add("flex-container");
-    // const divIcon1 = document.createElement("div");
-    // const divIcon2 = document.createElement("div");
-    // // add icon images as nodes with id
-    // const icons = (x, id) => {
-    //     const icon1 = document.createElement("img");
-    //     icon1.id = id;
-    //     icon1.setAttribute("src", x);
-    //     return icon1
-    // }
-    // // add icons to page with flexbox
-    // document.getElementById("contentID").insertAdjacentElement("afterend", flexDiv);
-    // flexDiv.appendChild(divIcon1);
-    // // divIcon1.appendChild(icons(uberEats, "uberEats"));
-    // flexDiv.appendChild(divIcon2);
-    // // divIcon2.appendChild(icons(doorDash, "doorDash"));
+    // Create pizzas for the menu
+    const margherita = createMenuItem("Margherita", [pizzaIngredients.cheese, pizzaIngredients.tomato])
+    divCoverMenu1.appendChild(margherita);
+    const hawaiian = createMenuItem("Hawaiian", [pizzaIngredients.ham, pizzaIngredients.pineapple]);
+    divCoverMenu1.appendChild(hawaiian);
+    const bacon = createMenuItem("Crispy Bacon", [pizzaIngredients.redOnion, pizzaIngredients.mushroom, pizzaIngredients.bacon])
+    divCoverMenu1.appendChild(bacon);
+    const prosciutto = createMenuItem("Prosciutto", [pizzaIngredients.prosciutto, pizzaIngredients.basil, pizzaIngredients.cheese])
+    divCoverMenu1.appendChild(prosciutto);
 
     return divContent;
+}
+
+const pizzaIngredients = {
+
+    cheese: "Chese",
+    tomato: "Tomato",
+    ham: "Ham",
+    prosciutto: "Prosciutto",
+    basil: "Basil",
+    pineapple: "Pineapple",
+    mushroom: "Mushroom",
+    tuna: "Tuna",
+    prawn: "Prawn",
+    anchovies: "Anchovies",
+    onions: "Onions",
+    redOnion: "Red Onion",
+    bacon: "Crispy Bacon",
+    greenPepper: "Green Pepper",
+    onion: "Onion",
+    jalapeno: "Jalapeño",
+    artichoke: "Artichoke"
+}
+
+const createMenuItem = (name, ingredients) => {
+    const menuItemDiv = document.createElement("div");
+    menuItemDiv.classList.add("menuItem")
+
+    const pizzaName = document.createElement("h2");
+    pizzaName.textContent = name;
+
+    const pizzaIngredients = document.createElement("p");
+    ingredients.forEach(ingredient => {
+        pizzaIngredients.textContent += ingredient
+        pizzaIngredients.textContent += " | "
+    });
+
+    menuItemDiv.appendChild(pizzaName);
+    menuItemDiv.appendChild(pizzaIngredients);
+
+    return menuItemDiv
 }
 
 const loadPage = () => {
