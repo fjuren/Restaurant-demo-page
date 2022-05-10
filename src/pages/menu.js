@@ -38,13 +38,13 @@ const pageContent = () => {
     divPage.appendChild(sectionContent.addContent()); 
 
     // Create pizzas for the menu
-    const margherita = createMenuItem("Margherita", [pizzaIngredients.cheese, pizzaIngredients.tomato])
+    const margherita = createMenuItem("Margherita", [pizzaIngredients.cheese, pizzaIngredients.tomato], "menuItem1")
     divCoverMenu1.appendChild(margherita);
-    const hawaiian = createMenuItem("Hawaiian", [pizzaIngredients.ham, pizzaIngredients.pineapple]);
+    const hawaiian = createMenuItem("Hawaiian", [pizzaIngredients.ham, pizzaIngredients.pineapple], "menuItem2");
     divCoverMenu1.appendChild(hawaiian);
-    const bacon = createMenuItem("Crispy Bacon", [pizzaIngredients.redOnion, pizzaIngredients.mushroom, pizzaIngredients.bacon])
+    const bacon = createMenuItem("Crispy Bacon", [pizzaIngredients.redOnion, pizzaIngredients.mushroom, pizzaIngredients.bacon], "menuItem3")
     divCoverMenu1.appendChild(bacon);
-    const prosciutto = createMenuItem("Prosciutto", [pizzaIngredients.prosciutto, pizzaIngredients.basil, pizzaIngredients.cheese])
+    const prosciutto = createMenuItem("Prosciutto", [pizzaIngredients.prosciutto, pizzaIngredients.basil, pizzaIngredients.cheese], "menuItem4")
     divCoverMenu1.appendChild(prosciutto);
 
     return divContent;
@@ -71,9 +71,10 @@ const pizzaIngredients = {
     artichoke: "Artichoke"
 }
 
-const createMenuItem = (name, ingredients) => {
+const createMenuItem = (name, ingredients, id) => {
     const menuItemDiv = document.createElement("div");
     menuItemDiv.classList.add("menuItem")
+    menuItemDiv.id = id;
 
     const pizzaName = document.createElement("h2");
     pizzaName.textContent = name;
