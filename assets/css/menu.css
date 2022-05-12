@@ -15,15 +15,7 @@
 } */
 
 #divCoverMenu2 {
-    background-image: url('/assets/images/pizza-table.png');
-    height: 10rem;
-    background-size: cover;
-    background-position: center;
-    padding-top: 15px;
-}
-
-#divCoverMenu3 {
-    background-image: url('/assets/images/pizza-table.png');
+    background-image: url('/assets/images/cocktail.jpg');
     height: 10rem;
     background-size: cover;
     background-position: center;
@@ -46,16 +38,17 @@
     grid-area: d;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1450px) {
     .grid-container-menu {
         display: grid;
-        /* grid-template-columns: repeat(6, 1fr); */
+        grid-template-columns: repeat(6, 1fr);
         /* grid-template-rows: 5rem; */
         justify-content: space-evenly;
         grid-row-gap: 1rem;
         grid-template-areas:
         "_ a b c d";   
         margin-bottom: 13rem;
+        grid-column-gap: 7%;
     }
 
     .menuItem {
@@ -69,6 +62,7 @@
         grid-template-rows: 5rem;
         justify-content: space-evenly;
         grid-row-gap: 1rem;
+        grid-template-columns: fit-content(100px) fit-content(100px);
         grid-template-areas:
         "a a b b"
         "c c d d";   
@@ -80,17 +74,16 @@
     }
 }
 
-@media screen and (min-width: 377px) and (max-width: 769px) {
+@media screen and (min-width: 377px) and (max-width: 1450px) {
     .grid-container-menu {
         display: grid;
-
         grid-template-rows: 5rem;
         grid-template-areas:
             "a a b b"
             "a a b b"
             "c c d d"
             "c c d d";
-        grid-column-gap: 1%;
+        grid-column-gap: 7%;
         margin-bottom: 20rem;
     }
 

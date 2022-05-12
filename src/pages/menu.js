@@ -52,7 +52,7 @@ const pageContent = () => {
 
 const pizzaIngredients = {
 
-    cheese: "Chese",
+    cheese: "Cheese",
     tomato: "Tomato",
     ham: "Ham",
     prosciutto: "Prosciutto",
@@ -84,9 +84,13 @@ const createMenuItem = (name, ingredients, id) => {
         pizzaIngredients.textContent += ingredient
         pizzaIngredients.textContent += " | "
     });
+ 
+    // slices off last " | " from end of pizza ingredients
+    const shortenedPizzaIngredients = document.createElement("p")
+    shortenedPizzaIngredients.textContent = pizzaIngredients.textContent.slice(0,-3);
 
     menuItemDiv.appendChild(pizzaName);
-    menuItemDiv.appendChild(pizzaIngredients);
+    menuItemDiv.appendChild(shortenedPizzaIngredients);
 
     return menuItemDiv
 }
