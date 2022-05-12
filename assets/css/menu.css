@@ -25,7 +25,6 @@
     background-size: cover;
     background-position: center;
     padding-top: 15px;
-    margin-top: 24.5rem;
     /* margin-bottom: relative; */
 }
 
@@ -103,6 +102,10 @@
     #menuItem3, #menuItem4,
     #menuItem8, #menuItem8 {
         margin-bottom: 0rem;
+    }
+
+    #divCoverMenu2 {
+        margin-top: 24.5rem;
     }
     /* .menuItem {
         margin-top: 11rem;

@@ -3,11 +3,11 @@ import pizzaTable from '/assets/images/pizza-table.png'
 
 const pageContent = () => {
     // // add home page content
-    const title = "Classics"
+    // const title = "Classics"
     const subText = "Find a pizza you'll love";   
     const image = pizzaTable;
     const content = "Menu content goes here."
-    const sectionContent = new pageSection(title,subText, image);
+    const sectionContent = new pageSection(subText, image);
 
     const divContent = document.getElementById("contentPages");
     const divPage = document.createElement("div");
@@ -22,14 +22,6 @@ const pageContent = () => {
     const divCoverMenu2 = document.createElement("div");
     divCoverMenu2.id = "divCoverMenu2"
     divCoverMenu2.classList.add("grid-container-menu");
-
-    // middle div for all menu items for positioning
-    // const divMenu1Items = document.createElement("div");
-    // divMenu1Items.classList.add("menu1Items");
-    // divCoverMenu1.appendChild(divMenu1Items);
-    // // const divMenu2Items = document.createElement("div");
-    // // divMenu2Items.classList.add("menu2Items");
-    // divCoverMenu2.appendChild(divMenu2Items)
 
     //  first menu section
     divContent.appendChild(divPage);
