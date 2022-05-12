@@ -7,7 +7,7 @@ const pageContent = () => {
     const subText = "Find a pizza you'll love";   
     const image = pizzaTable;
     const content = "Menu content goes here."
-    const sectionContent = new pageSection(title,subText, image, content);
+    const sectionContent = new pageSection(title,subText, image);
 
     const divContent = document.getElementById("contentPages");
     const divPage = document.createElement("div");
@@ -38,19 +38,29 @@ const pageContent = () => {
     divPage.appendChild(sectionContent.addContent()); 
 
     // Create pizzas for the menu
-    const margherita = createMenuItem("Margherita", [pizzaIngredients.cheese, pizzaIngredients.tomato], "menuItem1")
+    const margherita = createMenuItem("Margherita", [ingredients.cheese, ingredients.tomato], "menuItem1");
     divCoverMenu1.appendChild(margherita);
-    const hawaiian = createMenuItem("Hawaiian", [pizzaIngredients.ham, pizzaIngredients.pineapple], "menuItem2");
+    const hawaiian = createMenuItem("Hawaiian", [ingredients.ham, ingredients.pineapple], "menuItem2");
     divCoverMenu1.appendChild(hawaiian);
-    const bacon = createMenuItem("Crispy Bacon", [pizzaIngredients.redOnion, pizzaIngredients.mushroom, pizzaIngredients.bacon], "menuItem3")
+    const bacon = createMenuItem("Crispy Bacon", [ingredients.redOnion, ingredients.mushroom, ingredients.bacon], "menuItem3");
     divCoverMenu1.appendChild(bacon);
-    const prosciutto = createMenuItem("Prosciutto", [pizzaIngredients.prosciutto, pizzaIngredients.basil, pizzaIngredients.cheese], "menuItem4")
+    const prosciutto = createMenuItem("Prosciutto", [ingredients.prosciutto, ingredients.basil, ingredients.cheese], "menuItem4");
     divCoverMenu1.appendChild(prosciutto);
+
+    // Create Cocktails
+    const coco = createMenuItem("Coco Skellington", [ingredients.rum, ingredients.gin, ingredients.lime, ingredients.creme, ingredients.orangeB], "menuItem5");
+    divCoverMenu2.appendChild(coco);
+    const edward = createMenuItem("Edward's Lemonade", [ingredients.whiskey, ingredients.cherry, ingredients.orange, ingredients.splash], "menuItem6");
+    divCoverMenu2.appendChild(edward);
+    const beetle = createMenuItem("Beetle Juice", [ingredients.tequila, ingredients.muddled, ingredients.cranberry], "menuItem7");
+    divCoverMenu2.appendChild(beetle);
+    const vertigo = createMenuItem("Vertigo", [ingredients.ilegal, ingredients.cocchi, ingredients.velvet, ingredients.lemon, ingredients.gingerB], "menuItem8");
+    divCoverMenu2.appendChild(vertigo);
 
     return divContent;
 }
 
-const pizzaIngredients = {
+const ingredients = {
 
     cheese: "Cheese",
     tomato: "Tomato",
@@ -68,29 +78,50 @@ const pizzaIngredients = {
     greenPepper: "Green Pepper",
     onion: "Onion",
     jalapeno: "Jalapeño",
-    artichoke: "Artichoke"
-}
+    artichoke: "Artichoke",
+    // Coco Skellington
+    rum: "Rum",
+    gin: "Gin",
+    lime: "Lime",
+    creme: "Crème de Coconut",
+    orangeB: "Orange Blossom",
+    // edward's lemonade
+    whiskey: "Whiskey",
+    cherry: "Cherry",
+    orange: "Orange",
+    splash: "Splash of Simple Syrup",
+    // Beetle Juice
+    tequila: "Tequila",
+    muddled: "Muddled Blackberry",
+    cranberry: "Cranberry Jerry",
+    // vertigo
+    ilegal: "Ilegal Joven Mezcal",
+    cocchi: "Cocchi Americano",
+    velvet: "Velvet Falernum",
+    lemon: "Lemon",
+    gingerB: "Ginger Beer"
+};
 
-const createMenuItem = (name, ingredients, id) => {
+const createMenuItem = (name, ingred, id) => {
     const menuItemDiv = document.createElement("div");
     menuItemDiv.classList.add("menuItem")
     menuItemDiv.id = id;
 
-    const pizzaName = document.createElement("h2");
-    pizzaName.textContent = name;
+    const itemName = document.createElement("h2");
+    itemName.textContent = name;
 
-    const pizzaIngredients = document.createElement("p");
-    ingredients.forEach(ingredient => {
-        pizzaIngredients.textContent += ingredient
-        pizzaIngredients.textContent += " | "
+    const menuIngredients = document.createElement("p");
+    ingred.forEach(ingredient => {
+        menuIngredients.textContent += ingredient
+        menuIngredients.textContent += " | "
     });
  
     // slices off last " | " from end of pizza ingredients
-    const shortenedPizzaIngredients = document.createElement("p")
-    shortenedPizzaIngredients.textContent = pizzaIngredients.textContent.slice(0,-3);
+    const shortenedMenuIngredients = document.createElement("p")
+    shortenedMenuIngredients.textContent = menuIngredients.textContent.slice(0,-3);
 
-    menuItemDiv.appendChild(pizzaName);
-    menuItemDiv.appendChild(shortenedPizzaIngredients);
+    menuItemDiv.appendChild(itemName);
+    menuItemDiv.appendChild(shortenedMenuIngredients);
 
     return menuItemDiv
 }

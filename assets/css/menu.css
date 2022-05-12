@@ -20,6 +20,7 @@
     background-size: cover;
     background-position: center;
     padding-top: 15px;
+    margin-bottom: 17rem;
 }
 
 #menuItem1 {
@@ -35,6 +36,22 @@
 }
 
 #menuItem4 {
+    grid-area: d;
+}
+
+#menuItem5 {
+    grid-area: a;
+}
+
+#menuItem6 {
+    grid-area: b;
+}
+
+#menuItem7 {
+    grid-area: c;
+}
+
+#menuItem8 {
     grid-area: d;
 }
 
@@ -67,6 +84,7 @@
         "a a b b"
         "c c d d";   
         margin-bottom: 20rem;
+        font-size: 0.8rem;
     }
 
     .menuItem {
@@ -87,8 +105,12 @@
         margin-bottom: 20rem;
     }
 
-    #menuItem1, #menuItem2 {
+    #menuItem1, #menuItem2, #menuItem5, #menuItem6 {
         margin-top: 10rem;
     }
+/* 
+    #menuItem7, #menuItem8 {
+        margin-bottom: 10px;
+    } */
 }
 
