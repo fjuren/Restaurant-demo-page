@@ -1,12 +1,13 @@
 [X] Homepage story content
-[ ] Homepage image to background
+[X] Homepage image to background
 [X] Fonts
-[ ] Homepage styling
-[ ] Menu page styling
+[X] Homepage styling
+[X] Menu page styling
 [ ] Contact page styling 
-[ ] Menu text content
-[ ] Create footer
-[ ] Tab navbar always visiable on scroll
+[X] Menu text content
+[X] Create footer
 [ ] Contact page content: Location / Hours / Contact phone/email
-[ ] Menu page grid layout
+[X] Menu page grid layout
 [ ] Contact page grid layout
+[X] Keep header nav fixed on top on scroll
+[X] Fix footer on homepage desktop view

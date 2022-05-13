@@ -2,7 +2,12 @@
 .navTabs {
     overflow: hidden;
     /* border: 1px solid #ccc; */
-    background-color: #f1f1f1;  }
+    background-color: #f1f1f1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
   
   /* Style the buttons that are used to open the tab content */
 .navTabs button {

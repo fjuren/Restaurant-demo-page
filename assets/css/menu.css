@@ -1,5 +1,5 @@
 #menuPage {
-    padding-top: 2rem;
+    padding-top: 4rem;
     padding-bottom: 5rem;
 }
 
@@ -24,7 +24,7 @@
 #cocktails > h1 {
     color: white;
     position: absolute;
-    top: 413px;
+    top: 518px;
     left: 25px;
     /* text-align: center; */
     font-size: 4.4rem;
@@ -123,7 +123,7 @@
     #cocktails > h1 {
         color: white;
         position: absolute;
-        top: 605px;
+        top: 586px;
         left: 25px;
         /* text-align: center; */
         font-size: 4.4rem;
@@ -174,7 +174,7 @@
     #cocktails > h1 {
         color: white;
         position: absolute;
-        top: 534px;
+        top: 518px;
         left: 25px;
         /* text-align: center; */
         font-size: 4.4rem;
