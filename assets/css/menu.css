@@ -12,12 +12,23 @@
     position: relative;
 }
 
-/* #divCoverMenu1 > h1 {
-    margin: 0;
-    font-size: 5rem;
-    text-align: center;
+#classics > h1 {
     color: white;
-} */
+    position: absolute;
+    top: 23px;
+    left: 25px;
+    /* text-align: center; */
+    font-size: 4.4rem;
+}
+
+#cocktails > h1 {
+    color: white;
+    position: absolute;
+    top: 413px;
+    left: 25px;
+    /* text-align: center; */
+    font-size: 4.4rem;
+}
 
 #divCoverMenu2 {
     background-image: url('/assets/images/cocktail.jpg');
@@ -61,6 +72,25 @@
 }
 
 @media screen and (min-width: 1450px) {
+
+    #classics > h1 {
+        color: white;
+        position: absolute;
+        top: 23px;
+        left: 25px;
+        /* text-align: center; */
+        font-size: 4.4rem;
+    }
+
+    #cocktails > h1 {
+        color: white;
+        position: absolute;
+        top: 413px;
+        left: 25px;
+        /* text-align: center; */
+        font-size: 4.4rem;
+    }
+
     .grid-container-menu {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -76,9 +106,29 @@
     .menuItem {
         margin-top: 12rem;
     }
+
 }
 
 @media screen and (max-width: 391px) {
+
+    #classics > h1 {
+        color: white;
+        position: absolute;
+        top: 23px;
+        left: 25px;
+        /* text-align: center; */
+        font-size: 4.4rem;
+    }
+
+    #cocktails > h1 {
+        color: white;
+        position: absolute;
+        top: 605px;
+        left: 25px;
+        /* text-align: center; */
+        font-size: 4.4rem;
+    }
+
     .grid-container-menu {
         display: grid;
         grid-template-rows: 5rem;
@@ -107,12 +157,29 @@
     #divCoverMenu2 {
         margin-top: 24.5rem;
     }
-    /* .menuItem {
-        margin-top: 11rem;
-    } */
+
 }
 
 @media screen and (min-width: 392px) and (max-width: 1450px) {
+
+    #classics > h1 {
+        color: white;
+        position: absolute;
+        top: 23px;
+        left: 25px;
+        /* text-align: center; */
+        font-size: 4.4rem;
+    }
+
+    #cocktails > h1 {
+        color: white;
+        position: absolute;
+        top: 534px;
+        left: 25px;
+        /* text-align: center; */
+        font-size: 4.4rem;
+    }
+
     .grid-container-menu {
         display: grid;
         grid-template-rows: 5rem;
@@ -128,6 +195,26 @@
     #menuItem1, #menuItem2, #menuItem5, #menuItem6 {
         margin-top: 10rem;
     }
+/* 
+    #divCoverMenu1 > h1 {
+        padding-top: 14px;
+        padding-right: 110px;
+        padding-left: 15px;
+        font-size: 4.4rem;
+        text-align: center;
+        color: yellow;
+        grid-area: a;
+    }
+
+    #divCoverMenu2 > h1 {
+        padding-top: 14px;
+        padding-right: 110px;
+        padding-left: 61px;
+        font-size: 4.4rem;
+        text-align: center;
+        color: yellow;
+        grid-area: a;
+    } */
 /* 
     #menuItem7, #menuItem8 {
         margin-bottom: 10px;

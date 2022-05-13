@@ -29,6 +29,21 @@ const pageContent = () => {
     divPage.appendChild(divCoverMenu2);
     divPage.appendChild(sectionContent.addContent()); 
 
+    // menu Titles:
+    const classicsDiv = document.createElement("div");
+    divPage.appendChild(classicsDiv);
+    classicsDiv.id = "classics"
+    const classicsTitle = document.createElement("h1");
+    classicsTitle.textContent = "Classics"
+    classicsDiv.appendChild(classicsTitle);
+
+    const cocktailDiv = document.createElement("div");
+    divPage.appendChild(cocktailDiv);
+    cocktailDiv.id = "cocktails"
+    const cocktailTitle = document.createElement("h1");
+    cocktailTitle.textContent = "Cocktails"
+    cocktailDiv.appendChild(cocktailTitle);
+
     // Create pizzas for the menu
     const margherita = createMenuItem("Margherita", [ingredients.cheese, ingredients.tomato], "menuItem1");
     divCoverMenu1.appendChild(margherita);
