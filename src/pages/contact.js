@@ -1,31 +1,55 @@
-import { pageSection } from "../page components/components";
-import pizzaDining from '/assets/images/pizza-dining.jpg'
+const pageContent = () => {
 
 // Contact Us
 // Contact
 // Location
 // Hours
 
-const pageContent = () => {
-    // // add home page content
-    const title = "Contact Us"
-    const subText =""   
-    const image = pizzaDining;
-    const contentHours = "HOURS woooo"
-    const sectionContent = new pageSection(title,subText, image, contentHours);
-
     const divContent = document.getElementById("contentPages");
     const divPage = document.createElement("div");
     divPage.id = "contactPage";
     divPage.classList.add("tabContent");
 
+    // build menu where each section has an image (divCoverMenu), image title, and menu 
+    // items below. Parent div for all menu items
+    const divCoverContact = document.createElement("div");
+    divCoverContact.id = "divCoverContact";
+    divCoverContact.classList.add("grid-container-contact");
+
+
+    //  Contact us details fall below this div
     divContent.appendChild(divPage);
-    divPage.appendChild(sectionContent.addPageTitle());
-    divPage.appendChild(sectionContent.addSubText());
-    divPage.appendChild(sectionContent.addImage());
-    divPage.appendChild(sectionContent.addContent());
-    return navHeader, divContent;
-}
+    divPage.appendChild(divCoverContact);
+
+    // Contact
+    const contactDiv = document.createElement("div");
+    contactDiv.classList.add("contactItems");
+    // contactDiv.id = "contactID";
+    divCoverContact.appendChild(contactDiv);
+    // contactDiv.textContent = "hi"
+
+    // Location
+    const locationDiv = document.createElement("div");
+    locationDiv.classList.add("contactItems");
+    // locationDiv.id = "locationID";
+    divCoverContact.appendChild(locationDiv);
+
+    // Hours
+    const hoursDiv = document.createElement("div");
+    hoursDiv.classList.add("contactItems");
+    // hoursDiv.id = "hoursID";
+    divCoverContact.appendChild(hoursDiv);
+
+    // menu Titles:
+    const contactUsDiv = document.createElement("div");
+    divPage.appendChild(contactUsDiv);
+    contactUsDiv.id = "contactUs"
+    const contactUsTitle = document.createElement("h1");
+    contactUsTitle.textContent = "Contact Us"
+    contactUsDiv.appendChild(contactUsTitle);
+
+    return divContent;
+};
 
 const loadPage = () => {
     const contact = pageContent();

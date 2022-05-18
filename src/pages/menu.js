@@ -1,13 +1,13 @@
-import { pageSection } from "../page components/components";
-import pizzaTable from '/assets/images/pizza-table.png'
+// import { pageSection } from "../page components/components";
+// import pizzaTable from '/assets/images/pizza-table.png'
 
 const pageContent = () => {
     // // add home page content
     // const title = "Classics"
-    const subText = "Find a pizza you'll love";   
-    const image = pizzaTable;
-    const content = "Menu content goes here."
-    const sectionContent = new pageSection(subText, image);
+    // const subText = "Find a pizza you'll love";   
+    // const image = pizzaTable;
+    // const content = "Menu content goes here."
+    // const sectionContent = new pageSection(subText, image);
 
     const divContent = document.getElementById("contentPages");
     const divPage = document.createElement("div");
@@ -23,11 +23,12 @@ const pageContent = () => {
     divCoverMenu2.id = "divCoverMenu2"
     divCoverMenu2.classList.add("grid-container-menu");
 
-    //  first menu section
+    //  first menu section (classics)
     divContent.appendChild(divPage);
     divPage.appendChild(divCoverMenu1);
+    // Second menu section (coctails)
     divPage.appendChild(divCoverMenu2);
-    divPage.appendChild(sectionContent.addContent()); 
+    // divPage.appendChild(sectionContent.addContent()); 
 
     // menu Titles:
     const classicsDiv = document.createElement("div");
