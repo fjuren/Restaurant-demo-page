@@ -2,9 +2,18 @@
     height: 50px;
 }
 
-#divCoverContact > .contactItems {
-    grid-area: a;
+.contactItems:nth-child(1n) {
+    /* color:blue; */
 }
+
+.contactItems:nth-child(2n) {
+    /* color: yellow */
+}
+
+.contactItems:nth-child(3n) {
+
+}
+
 
 @media screen and (min-width: 1450px) {
     #contactPage {

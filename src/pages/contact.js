@@ -20,25 +20,46 @@ const pageContent = () => {
     //  Contact us details fall below this div
     divContent.appendChild(divPage);
     divPage.appendChild(divCoverContact);
-
-    // Contact
-    const contactDiv = document.createElement("div");
-    contactDiv.classList.add("contactItems");
-    // contactDiv.id = "contactID";
-    divCoverContact.appendChild(contactDiv);
-    // contactDiv.textContent = "hi"
-
+    
     // Location
     const locationDiv = document.createElement("div");
     locationDiv.classList.add("contactItems");
     // locationDiv.id = "locationID";
     divCoverContact.appendChild(locationDiv);
+    // Location content
+    const locationTitle = document.createElement("h2");
+    const addressInfo = document.createElement("h4");
+    locationTitle.innerHTML = "Location";
+    addressInfo.innerHTML = "4123 Green Street" + "<br />" + "Vancouver BC, V7L 4H1";
+    locationDiv.appendChild(locationTitle);
+    locationDiv.appendChild(addressInfo);
 
     // Hours
     const hoursDiv = document.createElement("div");
     hoursDiv.classList.add("contactItems");
     // hoursDiv.id = "hoursID";
     divCoverContact.appendChild(hoursDiv);
+    // Hours content
+    const hoursTitle = document.createElement("h2");
+    const hoursInfo = document.createElement("h4");
+    hoursTitle.innerHTML = "Hours";
+    hoursInfo.innerHTML = "Tue - Thu, 11am - 10pm" + "<br />" + "Fri - Sun, 11am - 11pm" + "<br />" + "Closed Mondays";
+    hoursDiv.appendChild(hoursTitle);
+    hoursDiv.appendChild(hoursInfo);
+
+
+    // Contact
+    const contactDiv = document.createElement("div");
+    contactDiv.classList.add("contactItems");
+    // contactDiv.id = "contactID";
+    divCoverContact.appendChild(contactDiv);
+    // contact content
+    const contactTitle = document.createElement("h2");
+    const contactInfo = document.createElement("h4");
+    contactTitle.innerHTML = "Contact Us";
+    contactInfo.innerHTML = "(781) 555-8471" + "<br />" + "CiciPizza@gmail.com"
+    contactDiv.appendChild(contactTitle);
+    contactDiv.appendChild(contactInfo);
 
     // menu Titles:
     const contactUsDiv = document.createElement("div");
