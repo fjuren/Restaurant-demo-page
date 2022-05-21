@@ -5,10 +5,20 @@ const pageContent = () => {
 // Location
 // Hours
 
-    const divContent = document.getElementById("contentPages");
-    const divPage = document.createElement("div");
-    divPage.id = "contactPage";
-    divPage.classList.add("tabContent");
+const divContent = document.getElementById("contentPages");
+const divPage = document.createElement("div");
+divPage.id = "contactPage";
+divPage.classList.add("tabContent");
+
+divContent.appendChild(divPage);
+
+    // menu Titles:
+    const contactUsDiv = document.createElement("div");
+    contactUsDiv.id = "contactUs"
+    const contactUsTitle = document.createElement("h1");
+    contactUsTitle.textContent = "Contact Us"
+    contactUsDiv.appendChild(contactUsTitle);
+    divPage.appendChild(contactUsDiv);
 
     // build menu where each section has an image (divCoverMenu), image title, and menu 
     // items below. Parent div for all menu items
@@ -18,7 +28,6 @@ const pageContent = () => {
 
 
     //  Contact us details fall below this div
-    divContent.appendChild(divPage);
     divPage.appendChild(divCoverContact);
     
     // Location
@@ -60,14 +69,6 @@ const pageContent = () => {
     contactInfo.innerHTML = "(781) 555-8471" + "<br />" + "CiciPizza@gmail.com"
     contactDiv.appendChild(contactTitle);
     contactDiv.appendChild(contactInfo);
-
-    // menu Titles:
-    const contactUsDiv = document.createElement("div");
-    divPage.appendChild(contactUsDiv);
-    contactUsDiv.id = "contactUs"
-    const contactUsTitle = document.createElement("h1");
-    contactUsTitle.textContent = "Contact Us"
-    contactUsDiv.appendChild(contactUsTitle);
 
     return divContent;
 };
